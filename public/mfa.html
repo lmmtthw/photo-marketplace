@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verify Code — photo-marketplace</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="header"><nav class="nav"><a class="brand" href="/"><span class="brand__dot"></span> photo-marketplace</a></nav></header>
+  <main class="container" style="max-width:520px">
+    <h1 class="h1">Enter your code</h1>
+    <p class="h2">We sent a 6-digit code to your email. It expires in 10 minutes.</p>
+    <label class="label">Code</label>
+    <input id="code" class="input" placeholder="123456" />
+    <div class="mt-2"><button class="button" id="verifyBtn" type="button">Verify</button></div>
+    <p id="msg" class="mt-2"></p>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/mfa.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — photo-marketplace</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="/"><span class="brand__dot"></span> photo-marketplace</a>
+    </nav>
+  </header>
+
+  <main class="container" style="max-width:520px">
+    <h1 class="h1">Create your account</h1>
+
+    <label class="label">Full name</label>
+    <input id="name" class="input" />
+
+    <label class="label">Username (optional)</label>
+    <input id="username" class="input" placeholder="e.g. matt.lim" />
+
+    <label class="label">Email</label>
+    <input id="email" class="input" autocomplete="email" />
+
+    <label class="label">Password</label>
+    <input id="password" type="password" class="input" autocomplete="new-password" />
+
+    <label class="label">Role</label>
+    <select id="role" class="input">
+      <option value="user">User</option>
+      <option value="photographer">Photographer</option>
+    </select>
+
+    <div class="mt-2">
+      <!-- type=button to prevent native form submit -->
+      <button class="button" id="registerBtn" type="button">Register</button>
+    </div>
+
+    <p id="msg" class="mt-2"></p>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

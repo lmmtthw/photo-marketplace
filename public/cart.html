@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cart — photo-marketplace</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a class="brand" href="/"><span class="brand__dot"></span> photo-marketplace</a>
+<a href="/">Explore</a>
+<a href="/orders.html">My Orders</a>
+<span class="nav__spacer"></span>
+<a href="/dashboard.html">Photographer Dashboard</a>
+</nav>
+</header>
+<main class="container">
+<h1 class="h1">Your cart</h1>
+<div id="items"></div>
+<hr class="mt-2"/>
+<div class="row card card--row mt-2">
+<strong>Total:</strong>
+<div>$<span id="total">0.00</span></div>
+<button class="button" id="checkoutBtn">Checkout with Stripe</button>
+</div>
+<p id="msg" class="mt-2"></p>
+</main>
+<footer class="footer"><div class="container">© <span id="year"></span> photo-marketplace</div></footer>
+<script src="/js/common.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/cart.js"></script>
+</body>
+</html>

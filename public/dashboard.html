@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Photographer Dashboard — photo-marketplace</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="/"><span class="brand__dot"></span> photo-marketplace</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="h1">Upload photos</h1>
+
+    <!-- ===== Upload form ===== -->
+    <div class="card p-3" style="max-width:760px">
+      <label class="label">Photos</label>
+      <!-- IMPORTANT: id must be 'file' -->
+      <input id="file" type="file" class="input" multiple accept="image/jpeg,image/png,image/webp" />
+
+      <div class="grid mt-2" style="grid-template-columns:1fr 1fr; gap:12px">
+        <div>
+          <label class="label">Title (optional)</label>
+          <input id="title" class="input" placeholder="If empty, we use the filename" />
+        </div>
+        <div>
+          <label class="label">Price (USD)</label>
+          <input id="price" class="input" placeholder="e.g. 4.99" />
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <button id="uploadBtn" type="button" class="button">Upload</button>
+      </div>
+      <p id="msg" class="mt-2"></p>
+    </div>
+
+    <h2 class="h1 mt-4">My Photos</h2>
+    <div id="mine" class="grid mt-2" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px"></div>
+  </main>
+
+  <!-- Load scripts AFTER HTML so elements exist -->
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
